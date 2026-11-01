@@ -74,8 +74,8 @@ Input.GetKeyDown(鍵)的意思：**只在「按下那一瞬間」的影格回傳
 四個變數分別記錄 W、A、S、D 這一幀有沒有被按下。
 哪個變數是 true，就印出對應訊息到 Console。
 
-<img src="單程式.png">
-<img src="單鍵.png">
+![替代文字](./單程式.png)
+![替代文字](./單鍵.png)
 
     b. 
 
@@ -92,13 +92,14 @@ if (wHold && aHold)
     Debug.Log("玩家按了 W + A 鍵！");
     comboTriggered = true;
 }
-<img src="雙鍵程式1.png">
-<img src="雙鍵程式2.png">
-<img src="A+D.png">
-<img src="A+S.png">
-<img src="S+D.png">
-<img src="W+A.png">
-<img src="W+D.png">
-<img src="W+S.png">
+![替代文字](./雙鍵程式1.png)
+![替代文字](./雙鍵程式2.png)
 
+
+![替代文字](./A+S.png)
+![替代文字](./A+D.png)
+![替代文字](./S+D.png)
+![替代文字](./W+A.png)
+![替代文字](./W+D.png)
+![替代文字](./W+S.png)
  其他:我前面單鍵一次就成功了，但是加上雙鍵就一直報錯不然就是一直重複，重改了好多次才能成功
