@@ -1,12 +1,12 @@
 # 第2次作業題目-作業-HW2
 >
->學號：1234567 (換成自己的)
+>學號：113111129 (換成自己的)
 ><br />
->姓名：王小明 (換成自己的)
+>姓名：呂霽芳(換成自己的)
 ><br />
->作業撰寫時間：180 (mins，包含程式撰寫時間，換成自己的)
+>作業撰寫時間：100 (mins，包含程式撰寫時間，換成自己的)
 ><br />
->最後撰寫文件日期：2023/09/22 (換成自己的)
+>最後撰寫文件日期：2026/11/01 (換成自己的)
 >
 
 本份文件包含以下主題：(至少需下面兩項，若是有多者可以自行新增)
@@ -55,13 +55,50 @@ public void mt_getResult(){
 
 1. 
 
+
     a.
 
 Ans:
+
+程式:bool wKey = Input.GetKeyDown(KeyCode.W);
+bool aKey = Input.GetKeyDown(KeyCode.A);
+bool sKey = Input.GetKeyDown(KeyCode.S);
+bool dKey = Input.GetKeyDown(KeyCode.D);
+
+if (wKey) Debug.Log("玩家按了 W 鍵！");
+if (aKey) Debug.Log("玩家按了 A 鍵！");
+if (sKey) Debug.Log("玩家按了 S 鍵！");
+if (dKey) Debug.Log("玩家按了 D 鍵！");
+
+Input.GetKeyDown(鍵)的意思：**只在「按下那一瞬間」的影格回傳 true**，按住不放不會重複觸發。
+四個變數分別記錄 W、A、S、D 這一幀有沒有被按下。
+哪個變數是 true，就印出對應訊息到 Console。
+
+<img src="單程式.png">
+<img src="單鍵.png">
 
     b. 
 
 Ans:
 
+程式:
+bool wHold = Input.GetKey(KeyCode.W);
+bool aHold = Input.GetKey(KeyCode.A);
+bool sHold = Input.GetKey(KeyCode.S);
+bool dHold = Input.GetKey(KeyCode.D);
 
-## 其他
+if (wHold && aHold)
+{
+    Debug.Log("玩家按了 W + A 鍵！");
+    comboTriggered = true;
+}
+<img src="雙鍵程式1.png">
+<img src="雙鍵程式2.png">
+<img src="A+D.png">
+<img src="A+S.png">
+<img src="S+D.png">
+<img src="W+A.png">
+<img src="W+D.png">
+<img src="W+S.png">
+
+ 其他:我前面單鍵一次就成功了，但是加上雙鍵就一直報錯不然就是一直重複，重改了好多次才能成功
